@@ -55,16 +55,13 @@ extracted_text = extract_pdf_text(pdf_path)  # Assuming you have a function for 
 
 
 # Define questions
-question_1 = "Should the employee's access be retained or removed?"
-question_2 = "For which employee are we considering in this mail chain ?"
-#approval_date = find_approval_date(extracted_text)
+question_1 = ""
+question_2 = ""
 
 # Get answers from the QA pipeline
 answer_1 = qa_inference(extracted_text, question_1)
 answer_2 = qa_inference(extracted_text, question_2)
-#answer_3 = qa_inference("Approval_date:", approval_date)
 
 print("Answer to Question 1:", answer_1)
 print('Answer to Question 2:', answer_2)
-#print("Approval_date:", approval_date)
 
